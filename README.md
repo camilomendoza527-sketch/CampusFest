@@ -1,4 +1,4 @@
-# CampusFest 🎉
+# CampusFest 
 
 CampusFest es un proyecto universitario diseñado para gestionar eventos en el campus: consultar cupos disponibles, reservar entradas, confirmar reservas (con un plazo de 10 minutos), cancelar reservas y registrar la asistencia mediante código QR.
 
@@ -6,16 +6,16 @@ En este repositorio se encuentran los diagramas de análisis y diseño del siste
 
 ---
 
-## 📌 ¿Qué hace el sistema?
+##  ¿Qué hace el sistema?
 
-### 👨‍🎓 Estudiante
+###  Estudiante
 - **Consultar cupos:** Revisa cuántos cupos libres quedan en un evento.
 - **Reservar:** Aparta un cupo (queda en estado *Pendiente*).
 - **Confirmar reserva:** Confirma su reserva antes de 10 minutos (pasa a *Confirmada*).
 - **Cancelar reserva:** Libera su lugar si ya no desea asistir.
 - **Registrar asistencia:** Muestra su código QR al ingresar al evento.
 
-### 👔 Organizador
+###  Organizador
 - **Gestionar evento:** Modifica la descripción, fecha u horario de un evento.
 - **Reporte de reservas:** Genera el listado de reservas realizadas.
 - **Reporte de asistencia:** Genera el listado de personas que ingresaron con su QR.
@@ -25,7 +25,7 @@ En este repositorio se encuentran los diagramas de análisis y diseño del siste
 
 ---
 
-## 📂 Organización de carpetas
+##  Organización de carpetas
 
 ### 1. `CdU/` (Casos de Uso)
 Contiene `casos_de_uso.drawio`, con los diagramas generales de casos de uso divididos en dos subsistemas:
