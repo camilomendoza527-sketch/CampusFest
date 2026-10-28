@@ -6,44 +6,66 @@ Repositorio oficial del caso de estudio **CampusFest**, desarrollado para la asi
 
 ## Estructura del Repositorio
 
-El proyecto se encuentra estrictamente organizado dentro de la carpeta `docs/` cumpliendo con los lineamientos del taller:
+El proyecto se encuentra organizado dentro de la carpeta `docs/` con trazabilidad directa a cada uno de los retos del laboratorio y los requerimientos del docente:
 
 ```text
 CampusFest/
 ├── docs/
-│   ├── CdU/                                         # Carpeta con los Casos de Uso
+│   ├── CdU/                                         # Carpeta con los Casos de Uso del sistema
 │   │   ├── caso_uso.drawio                          # Casos de uso de Estudiantes
 │   │   └── caso_organizacion.drawio                 # Casos de uso de Organizadores
 │   │
-│   └── Analisis/                                    # Diagramas ordenados por Caso de Uso
-│       ├── 01_Consultar_Cupos/
+│   └── Analisis/                                    # Diagramas ordenados por Caso de Uso y Reto
+│       │
+│       ├── 01_Consultar_Cupos/                      # Retos 2, 3 y 4
 │       │   ├── Colaboracion_sin_mensajes.drawio     # Reto 2: Clases participantes y cálculo
 │       │   ├── Comunicacion_con_mensajes.drawio     # Reto 3: Diagrama de comunicación con mensajes
 │       │   └── Secuencia.drawio                     # Reto 4: Diagrama de secuencia temporal
 │       │
-│       ├── 02_Reservar/
+│       ├── 02_Reservar/                             # Reto 5
 │       │   ├── Colaboracion_sin_mensajes.drawio     # Reto 5: Colaboración para crear y confirmar
 │       │   └── Estados_Reserva.drawio               # Reto 5: Máquina de estados de la entidad Reserva
 │       │
-│       ├── 03_Actualizar_Evento/
+│       ├── 03_Actualizar_Evento/                    # Reto 6
 │       │   └── Comunicacion_con_mensajes.drawio     # Reto 6: Operación simple (Límite directo a Entidad)
 │       │
-│       ├── 04_Reporte_Reservas/
+│       ├── 04_Reporte_Reservas/                     # Reto 7A
 │       │   └── Comunicacion_con_mensajes.drawio     # Reto 7A: Escenario A - Reporte de Reservas
 │       │
-│       ├── 05_Reporte_Asistencia/
+│       ├── 05_Reporte_Asistencia/                   # Reto 7B
 │       │   └── Comunicacion_con_mensajes.drawio     # Reto 7B: Escenario B - Reporte de Asistencia (QR)
 │       │
-│       ├── 06_Colaboracion_General/
+│       ├── 06_Colaboracion_General/                 # Tarea del Tablero
 │       │   └── Colaboracion_General.drawio          # Modelo unificado de todo el sistema (Schach Fig. 13.52)
 │       │
-│       └── 07_Clases_Entidad/
-│           ├── Clases_Entidad_Con_Estereotipos.drawio    # Con estereotipos BCE (Jacobson) y multiplicidades
-│           └── Clases_Entidad_Sin_Estereotipos.drawio    # UML estándar (3 compartimentos: atributos y métodos)
+│       ├── 07_Clases_Entidad/                       # Clases de Entidad Solicitadas
+│       │   ├── Clases_Entidad_Con_Estereotipos.drawio    # Con estereotipos BCE (Jacobson) y multiplicidades
+│       │   └── Clases_Entidad_Sin_Estereotipos.drawio    # UML estándar (3 compartimentos: atributos y métodos)
+│       │
+│       └── 08_Integracion_y_Auditoria/              # Reto 8
+│           └── RETO 8 - Integracion_y_Auditoria.drawio   # Modelo integrado + Tarjeta CRC + Hallazgos de auditoría
 │
 ├── 214485 (1).pdf                                   # Guía y enunciado de los retos del laboratorio
 └── README.md                                        # Documentación general del repositorio
 ```
+
+---
+
+## Mapeo de Retos del Taller
+
+| Reto del Taller | Ubicación en el Repositorio | Descripción / Contenido |
+| :--- | :--- | :--- |
+| **Reto 1** | *(En el cuaderno / informe)* | Clasificación de responsabilidades BCE. |
+| **Reto 2** | `docs/Analisis/01_Consultar_Cupos/Colaboracion_sin_mensajes.drawio` | Clases participantes y cálculo de los 20 cupos. |
+| **Reto 3** | `docs/Analisis/01_Consultar_Cupos/Comunicacion_con_mensajes.drawio` | Diagrama de comunicación con tarjetas ordenadas (1.E a 9.A). |
+| **Reto 4** | `docs/Analisis/01_Consultar_Cupos/Secuencia.drawio` | Diagrama de secuencia con llamadas y retornos punteados. |
+| **Reto 5** | `docs/Analisis/02_Reservar/` | Colaboración con `Gestión Reserva` y Máquina de Estados de `Reserva`. |
+| **Reto 6** | `docs/Analisis/03_Actualizar_Evento/Comunicacion_con_mensajes.drawio` | Coordinación de operación sencilla sin control (Schach). |
+| **Reto 7A** | `docs/Analisis/04_Reporte_Reservas/Comunicacion_con_mensajes.drawio` | Escenario A: Reporte de reservas. |
+| **Reto 7B** | `docs/Analisis/05_Reporte_Asistencia/Comunicacion_con_mensajes.drawio` | Escenario B: Reporte de asistencia con validación QR. |
+| **Reto 8** | `docs/Analisis/08_Integracion_y_Auditoria/RETO 8 - Integracion_y_Auditoria.drawio` | Modelo integrado con Tarjeta CRC y Hallazgos de Auditoría. |
+| **Tablero** | `docs/Analisis/06_Colaboracion_General/Colaboracion_General.drawio` | Colaboración General unificada (Stephen Schach, pág. 52). |
+| **Tablero** | `docs/Analisis/07_Clases_Entidad/` | Clases entidad con estereotipos y sin estereotipos (con métodos y atributos). |
 
 ---
 
