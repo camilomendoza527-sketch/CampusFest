@@ -1,0 +1,55 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="K0tC5y9ASdHi9Xqh26IT">
+    <mxGraphModel dx="1455" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;fontSize=18;fontStyle=1;align=left;" value="RETO 5&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="300" x="70" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Estudiante" vertex="1">
+          <mxGeometry height="80" width="40" x="40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="pantalla" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;" value="Pantalla Evento" vertex="1">
+          <mxGeometry height="60" width="80" x="200" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="calculo" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;" value="CalcularDisponibilidad" vertex="1">
+          <mxGeometry height="70" width="60" x="400" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="evento" parent="1" style="shape=umlEntity;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;" value="Evento" vertex="1">
+          <mxGeometry height="60" width="60" x="600" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gestion" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;" value="Gestión Reserva" vertex="1">
+          <mxGeometry height="70" width="60" x="400" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="reserva" parent="1" style="shape=umlEntity;whiteSpace=wrap;html=1;verticalLabelPosition=bottom;verticalAlign=top;" value="Reserva" vertex="1">
+          <mxGeometry height="60" width="60" x="600" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="actor" style="endArrow=none;html=1;" target="pantalla">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="pantalla" style="endArrow=none;html=1;" target="calculo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="calculo" style="endArrow=none;html=1;" target="reserva">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="pantalla" style="endArrow=none;html=1;" target="gestion">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="gestion" style="endArrow=none;html=1;" target="reserva">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TLhLbefNvz9FKqGhDcTQ-25" edge="1" parent="1" source="calculo" style="endArrow=none;html=1;rounded=0;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.005;exitY=0.503;exitDx=0;exitDy=0;exitPerimeter=0;" target="evento" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="470" y="350" as="sourcePoint" />
+            <mxPoint x="420" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TLhLbefNvz9FKqGhDcTQ-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="320" width="720" x="20" y="270" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
