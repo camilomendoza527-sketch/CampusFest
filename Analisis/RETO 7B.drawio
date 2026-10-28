@@ -1,0 +1,162 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="g6CO-bXnFHZebpyQee-q">
+    <mxGraphModel dx="1414" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Organizador" vertex="1">
+          <mxGeometry height="60" width="30" x="70" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-2" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="gZEDDwSiqTOm7evn54Z4-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-3" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="gZEDDwSiqTOm7evn54Z4-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-4" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Pantalla&lt;div&gt;Eventos&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="220" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-5" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.494;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="gZEDDwSiqTOm7evn54Z4-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-6" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Evento" vertex="1">
+          <mxGeometry height="80" width="80" x="230" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-7" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="gZEDDwSiqTOm7evn54Z4-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-8" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestion&lt;div&gt;Asistencia&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="70" x="430" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-9" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Asistencia" vertex="1">
+          <mxGeometry height="80" width="80" x="610" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-10" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="gZEDDwSiqTOm7evn54Z4-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-11" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Evento" vertex="1">
+          <mxGeometry height="80" width="80" x="610" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-12" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="gZEDDwSiqTOm7evn54Z4-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-13" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Estudiante" vertex="1">
+          <mxGeometry height="80" width="80" x="424" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-14" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Reporte&lt;div&gt;Asistencia&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="220" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-15" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-14" style="endArrow=none;html=1;rounded=0;entryX=0.442;entryY=1.047;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.002;exitY=0.547;exitDx=0;exitDy=0;exitPerimeter=0;" target="gZEDDwSiqTOm7evn54Z4-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="740" as="sourcePoint" />
+            <mxPoint x="340" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-16" edge="1" parent="1" source="gZEDDwSiqTOm7evn54Z4-14" style="endArrow=none;html=1;rounded=0;exitX=0.001;exitY=0.502;exitDx=0;exitDy=0;exitPerimeter=0;" target="gZEDDwSiqTOm7evn54Z4-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="740" as="sourcePoint" />
+            <mxPoint x="340" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="120" y="590" as="sourcePoint" />
+            <mxPoint x="200" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="Solicitar lista&lt;div&gt;eventos&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" x="-0.5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="230" y="550" as="sourcePoint" />
+            <mxPoint x="230" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="335" y="590" as="sourcePoint" />
+            <mxPoint x="415" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="3">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="515" y="590" as="sourcePoint" />
+            <mxPoint x="595" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="4">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="600" y="630" as="sourcePoint" />
+            <mxPoint x="510" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="5">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="670" y="650" as="sourcePoint" />
+            <mxPoint x="670" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="6">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="620" y="730" as="sourcePoint" />
+            <mxPoint x="620" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="7">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="600" y="810" as="sourcePoint" />
+            <mxPoint x="510" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="8">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="517" y="770" as="sourcePoint" />
+            <mxPoint x="597" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="9">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="489.02" y="700.03" />
+              <mxPoint x="439.02" y="700.03" />
+            </Array>
+            <mxPoint x="489.02" y="640" as="sourcePoint" />
+            <mxPoint x="438.99" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="10">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="430" y="700" as="sourcePoint" />
+            <mxPoint x="350" y="775" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="12">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="420" y="620" as="sourcePoint" />
+            <mxPoint x="330" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="11">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="337" y="740" as="sourcePoint" />
+            <mxPoint x="407" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="13b">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="203.60000000000002" y="730.4000000000001" as="sourcePoint" />
+            <mxPoint x="140" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0.164;entryY=0.62;entryDx=0;entryDy=0;entryPerimeter=0;" value="13b">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="211.60000000000002" y="620.4" as="sourcePoint" />
+            <mxPoint x="108" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gZEDDwSiqTOm7evn54Z4-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: justify;&quot;&gt;1. El organizador selecciona el reporte de asistencia de un evento&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;2. Solicitar reporte de la asistencia de un evento&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;3. Solicitar información del evento&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;4. Retornar información del evento&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;5. Solicitar información de la asistencia&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;6. Retornar información de la asistencia&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;7. Solicitar información de estudiantes&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;8. Retornar información de estudiantes&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;9. Calcular listado de asistencias&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;10. Generar reporte de asistencia&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;11. &quot;Reporte generado&quot;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;12. &quot;Reporte generado&quot;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;13.a &quot;OK&quot;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;13.b Reporte&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="360" x="370" y="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

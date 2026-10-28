@@ -1,0 +1,59 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="reto6-simple">
+    <mxGraphModel dx="1200" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        
+        <mxCell id="title" value="RETO 6 - ¿Quién coordina una operación sencilla? (Actualizar descripción de un concierto)" style="text;html=1;fontSize=16;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="25" width="750" height="30" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="act_org" value="&lt;b&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Organizador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="40" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="bnd_org" value="&lt;b&gt;&amp;lt;&amp;lt;límite&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Interfaz Organizador" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="290" y="165" width="90" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ent_ev" value="&lt;b&gt;&amp;lt;&amp;lt;entidad&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Evento" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="640" y="165" width="80" height="70" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="link_act_bnd" edge="1" parent="1" source="act_org" target="bnd_org" style="endArrow=none;html=1;strokeWidth=2;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="link_bnd_ent" edge="1" parent="1" source="bnd_org" target="ent_ev" style="endArrow=none;html=1;strokeWidth=2;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="msg_1" value="1: Ingresar nueva descripción (texto)  --&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="105" y="145" width="195" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg_2" value="2: actualizarDescripcion (nuevoTexto, fechaHoraModif)  --&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="365" y="145" width="280" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="msg_3" value="&lt;--  3: Confirmar actualización (OK)" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="390" y="235" width="230" height="20" as="geometry" />
+        </mxCell>
+        
+        
+        <mxCell id="box_justif" value="&lt;b style=&quot;font-size: 13px;&quot;&gt;Justificación Teórica según Stephen R. Schach (Análisis Orientado a Objetos):&lt;/b&gt;&lt;br&gt;&lt;b&gt;¿Es indispensable agregar una nueva clase &amp;lt;&amp;lt;control&amp;gt;&amp;gt;?&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;&quot;&gt;NO.&lt;/b&gt; De acuerdo con Schach (&lt;i&gt;Object-Oriented and Classical Software Engineering&lt;/i&gt;, Cap. 13), una clase de control solo se justifica si existe lógica de negocio compleja, transaccionalidad o necesidad de coordinar múltiples entidades. Para operaciones sencillas de actualización directa (como modificar un campo de texto y registrar el timestamp en una sola entidad), la clase límite (&lt;b&gt;:Interfaz Organizador&lt;/b&gt;) puede comunicarse directamente con la entidad (&lt;b&gt;:Evento&lt;/b&gt;). Introducir un control aquí causaría una &lt;b&gt;proliferación innecesaria de clases triviales&lt;/b&gt; que solo reenvían llamadas sin aportar valor." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;align=left;verticalAlign=top;size=16;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="750" height="150" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="box_clean" value="&lt;b style=&quot;font-size: 13px;&quot;&gt;Pregunta de Clean Architecture:&lt;/b&gt;&lt;br&gt;&lt;b&gt;Si Web, Móvil y API actualizan eventos, ¿en qué lugar convendría centralizar la operación?&lt;/b&gt;&lt;br&gt;Convendría centralizar la operación en la &lt;b&gt;Capa de Aplicación (Capa de Casos de Uso / Use Case Interactor)&lt;/b&gt;. Al ubicar la regla de actualización (&lt;i&gt;actualizar descripción y fijar fecha/hora de auditoría&lt;/i&gt;) en un Caso de Uso independiente de la interfaz, cualquier canal de entrada (controladores Web MVC, controladores de la App Móvil o endpoints de API REST) invoca el mismo servicio de aplicación, asegurando la consistencia del negocio y evitando duplicación de código en las interfaces." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;fontSize=11;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="480" width="750" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
