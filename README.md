@@ -6,17 +6,16 @@ Repositorio oficial del caso de estudio **CampusFest**, desarrollado para la asi
 
 ## Estructura del Repositorio
 
-El proyecto se encuentra organizado dentro de la carpeta `docs/` cumpliendo con los lineamientos de la entrega:
+El proyecto se encuentra estrictamente organizado dentro de la carpeta `docs/` cumpliendo con los lineamientos del taller:
 
 ```text
 CampusFest/
 ├── docs/
-│   ├── CdU/                                         # Diagramas de Casos de Uso del sistema
-│   │   ├── caso_uso.drawio                          # Casos de uso de los Estudiantes
-│   │   └── caso_organizacion.drawio                 # Casos de uso de los Organizadores
+│   ├── CdU/                                         # Carpeta con los Casos de Uso
+│   │   ├── caso_uso.drawio                          # Casos de uso de Estudiantes
+│   │   └── caso_organizacion.drawio                 # Casos de uso de Organizadores
 │   │
-│   └── Analisis/                                    # Diagramas de Análisis clasificados por Caso de Uso
-│       │
+│   └── Analisis/                                    # Diagramas ordenados por Caso de Uso
 │       ├── 01_Consultar_Cupos/
 │       │   ├── Colaboracion_sin_mensajes.drawio     # Reto 2: Clases participantes y cálculo
 │       │   ├── Comunicacion_con_mensajes.drawio     # Reto 3: Diagrama de comunicación con mensajes
@@ -72,5 +71,5 @@ CampusFest/
 ## Cómo abrir y visualizar los diagramas
 
 Todos los diagramas fueron diseñados en formato XML nativo de **Draw.io** (`.drawio`) con estilo **monocromático / neutro (blanco y negro)**:
-1. Instale la aplicación de escritorio de [Draw.io (diagrams.net)](https://www.diagrams.net/).
+1. Abra la aplicación de escritorio de [Draw.io](https://www.diagrams.net/).
 2. Abra cualquier archivo `.drawio` ubicado en `docs/CdU/` o `docs/Analisis/`.

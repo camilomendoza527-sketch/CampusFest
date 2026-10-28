@@ -1,161 +1,94 @@
 <mxfile host="Electron">
-  <diagram name="Página-1" id="reto5-refined">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <diagram name="Página-1" id="estados-reserva">
+    <mxGraphModel dx="1100" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         
-        
-        <mxCell id="title" value="RETO 5 - Modelo Refinado de Clases y Diagrama de Estados de Reserva" style="text;html=1;fontSize=16;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="40" y="20" width="700" height="30" as="geometry" />
+        <mxCell id="title" value="Diagrama de Estados de la Entidad Reserva (UML State Machine Diagram)" style="text;html=1;fontSize=15;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="700" height="30" as="geometry" />
         </mxCell>
         
-        
-        <mxCell id="sec1_box" value="&lt;b&gt;Parte 1: Modelo de Análisis Refinado (Crear y Confirmar Reserva)&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=26;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="40" y="60" width="1080" height="340" as="geometry" />
+        <!-- Estado Inicial -->
+        <mxCell id="st_init" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="28" height="28" as="geometry" />
         </mxCell>
         
-        
-        <mxCell id="act_est" value="&lt;b&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Estudiante" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="sec1_box">
-          <mxGeometry x="40" y="100" width="40" height="75" as="geometry" />
+        <!-- Estado: Pendiente -->
+        <mxCell id="st_pendiente" value="&lt;b&gt;Pendiente&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / ocupa cupo provisional&lt;br&gt;do / iniciar temporizador (10 min)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="240" y="130" width="210" height="85" as="geometry" />
         </mxCell>
         
-        <mxCell id="bnd_pantalla" value="&lt;b&gt;&amp;lt;&amp;lt;límite&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Pantalla Eventos" style="shape=umlBoundary;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="sec1_box">
-          <mxGeometry x="180" y="105" width="80" height="65" as="geometry" />
+        <!-- Estado: Confirmada -->
+        <mxCell id="st_confirmada" value="&lt;b&gt;Confirmada&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / ocupa cupo definitivo&lt;br&gt;entry / generar código QR válido&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="640" y="90" width="220" height="80" as="geometry" />
         </mxCell>
         
-        <mxCell id="ctrl_disp" value="&lt;b&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Calcular Disponibilidad" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="sec1_box">
-          <mxGeometry x="380" y="55" width="75" height="65" as="geometry" />
+        <!-- Estado: Vencida -->
+        <mxCell id="st_vencida" value="&lt;b&gt;Vencida&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / libera cupo provisional&lt;br&gt;entry / registrar en historial&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="640" y="210" width="220" height="70" as="geometry" />
         </mxCell>
         
-        <mxCell id="ctrl_ges" value="&lt;b&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#b85450&quot;&gt;&lt;b&gt;:Gestión Reserva&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;i&gt;(Nueva clase)&lt;/i&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="sec1_box">
-          <mxGeometry x="380" y="190" width="75" height="65" as="geometry" />
+        <!-- Estado: Cancelada -->
+        <mxCell id="st_cancelada" value="&lt;b&gt;Cancelada&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / libera cupo (si ocupaba)&lt;br&gt;entry / reportar como historial&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="640" y="320" width="220" height="70" as="geometry" />
         </mxCell>
         
-        <mxCell id="ent_ev" value="&lt;b&gt;&amp;lt;&amp;lt;entidad&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Evento" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="sec1_box">
-          <mxGeometry x="640" y="55" width="75" height="65" as="geometry" />
+        <!-- Estado Final -->
+        <mxCell id="st_final" value="" style="ellipse;shape=doubleEllipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="230" width="30" height="30" as="geometry" />
         </mxCell>
         
-        <mxCell id="ent_res" value="&lt;b&gt;&amp;lt;&amp;lt;entidad&amp;gt;&amp;gt;&lt;/b&gt;&lt;br&gt;:Reserva" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;verticalAlign=top;verticalLabelPosition=bottom;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;" vertex="1" parent="sec1_box">
-          <mxGeometry x="640" y="190" width="75" height="65" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="l_est_pan" edge="1" parent="sec1_box" source="act_est" target="bnd_pantalla" style="endArrow=none;html=1;strokeWidth=2;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="l_pan_cdisp" edge="1" parent="sec1_box" source="bnd_pantalla" target="ctrl_disp" style="endArrow=none;html=1;strokeWidth=2;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="l_pan_cges" edge="1" parent="sec1_box" source="bnd_pantalla" target="ctrl_ges" style="endArrow=none;html=1;strokeWidth=2;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="l_cdisp_ev" edge="1" parent="sec1_box" source="ctrl_disp" target="ent_ev" style="endArrow=none;html=1;strokeWidth=2;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="l_cdisp_res" edge="1" parent="sec1_box" source="ctrl_disp" target="ent_res" style="endArrow=none;html=1;strokeWidth=2;">
+        <!-- Transiciones -->
+        <mxCell id="tr_init_pend" value="Crear reserva ()&lt;br&gt;[aforo disponible]" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="st_init" target="st_pendiente">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        <mxCell id="l_cges_ev" edge="1" parent="sec1_box" source="ctrl_ges" target="ent_ev" style="endArrow=none;html=1;strokeWidth=2;dashed=1;strokeColor=#000000;">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="l_cges_res" edge="1" parent="sec1_box" source="ctrl_ges" target="ent_res" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#000000;">
+        <mxCell id="tr_pend_conf" value="confirmarReserva () [tiempo &amp;lt;= 10 min]&lt;br&gt;/ detener temporizador" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;strokeColor=#000000;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="st_pendiente" target="st_confirmada">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        
-        <mxCell id="note_ges" value="&lt;b&gt;¿Por qué hace falta otra clase de control (:Gestión Reserva)?&lt;/b&gt;&lt;br&gt;&lt;i&gt;CalcularDisponibilidad&lt;/i&gt; es una clase de consulta (read-only) cuyo único propósito es calcular cupos libres. &lt;b&gt;Crear y confirmar reservas&lt;/b&gt; es una operación transaccional de negocio que requiere:&lt;br&gt;1. Validar aforo y crear la reserva en estado &lt;i&gt;Pendiente&lt;/i&gt;.&lt;br&gt;2. Iniciar y monitorear el temporizador de 10 minutos.&lt;br&gt;3. Manejar la confirmación (transición a &lt;i&gt;Confirmada&lt;/i&gt;) o expiración (transición a &lt;i&gt;Vencida&lt;/i&gt; y liberación de cupo).&lt;br&gt;Separar ambas responsabilidades respeta el &lt;b&gt;Principio de Responsabilidad Única (SRP)&lt;/b&gt;." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;size=14;fontSize=10;" vertex="1" parent="sec1_box">
-          <mxGeometry x="760" y="55" width="290" height="230" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="sec2_box" value="&lt;b&gt;Parte 2: Diagrama de Estados de la Entidad Reserva (UML State Machine)&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=26;fillColor=#ffffff;fontColor=#000000;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="40" y="420" width="1080" height="360" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="st_init" value="" style="ellipse;fillColor=#000000;strokeColor=none;" vertex="1" parent="sec2_box">
-          <mxGeometry x="60" y="110" width="26" height="26" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="st_pendiente" value="&lt;b&gt;Pendiente&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / ocupa cupo provisional&lt;br&gt;do / iniciar temporizador(10 min)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="sec2_box">
-          <mxGeometry x="220" y="80" width="200" height="85" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="st_confirmada" value="&lt;b&gt;Confirmada&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / ocupa cupo definitivo&lt;br&gt;entry / generar código QR válido&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="sec2_box">
-          <mxGeometry x="610" y="50" width="210" height="80" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="st_vencida" value="&lt;b&gt;Vencida&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / libera cupo provisional&lt;br&gt;entry / registrar en historial&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="sec2_box">
-          <mxGeometry x="610" y="160" width="210" height="70" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="st_cancelada" value="&lt;b&gt;Cancelada&lt;/b&gt;&lt;hr&gt;&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;entry / libera cupo (si ocupaba)&lt;br&gt;entry / reportar como historial&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="sec2_box">
-          <mxGeometry x="610" y="260" width="210" height="70" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="st_final" value="" style="ellipse;shape=doubleEllipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="sec2_box">
-          <mxGeometry x="960" y="165" width="28" height="28" as="geometry" />
-        </mxCell>
-        
-        
-        
-        <mxCell id="tr_init_pend" value="Crear reserva ()&lt;br&gt;[aforo disponible]" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;" edge="1" parent="sec2_box" source="st_init" target="st_pendiente">
+        <mxCell id="tr_pend_venc" value="timeout (10 min sin confirmar)&lt;br&gt;/ liberar cupo" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;strokeColor=#000000;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="st_pendiente" target="st_vencida">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         
-        
-        <mxCell id="tr_pend_conf" value="confirmarReserva () [tiempo &amp;lt;= 10 min]&lt;br&gt;/ detener temporizador" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="sec2_box" source="st_pendiente" target="st_confirmada">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="tr_pend_venc" value="timeout (10 min sin confirmar)&lt;br&gt;/ liberar cupo" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="sec2_box" source="st_pendiente" target="st_vencida">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        
-        
-        <mxCell id="tr_pend_canc" value="cancelarReserva () [por estudiante]&lt;br&gt;/ liberar cupo" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="sec2_box" source="st_pendiente" target="st_cancelada">
+        <mxCell id="tr_pend_canc" value="cancelarReserva () [por estudiante]&lt;br&gt;/ liberar cupo" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=10;fontColor=#000000;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="st_pendiente" target="st_cancelada">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="320" y="295" />
+              <mxPoint x="345" y="355" />
             </Array>
           </mxGeometry>
         </mxCell>
         
-        
-        <mxCell id="tr_conf_canc" value="cancelarReserva () [organizador/estudiante]&lt;br&gt;/ liberar cupo y anular QR" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=9;fontColor=#000000;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="sec2_box" source="st_confirmada" target="st_cancelada">
+        <mxCell id="tr_conf_canc" value="cancelarReserva () [organizador/estudiante]&lt;br&gt;/ liberar cupo y anular QR" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=9;fontColor=#000000;strokeColor=#000000;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="st_confirmada" target="st_cancelada">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="663" y="145" />
-              <mxPoint x="663" y="245" />
+              <mxPoint x="695" y="190" />
+              <mxPoint x="695" y="300" />
             </Array>
           </mxGeometry>
         </mxCell>
         
-        
-        <mxCell id="tr_conf_final" edge="1" parent="sec2_box" source="st_confirmada" target="st_final" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+        <mxCell id="tr_conf_final" edge="1" parent="1" source="st_confirmada" target="st_final" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#000000;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="974" y="90" />
+              <mxPoint x="1015" y="130" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="tr_venc_final" edge="1" parent="sec2_box" source="st_vencida" target="st_final" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;">
+        <mxCell id="tr_venc_final" edge="1" parent="1" source="st_vencida" target="st_final" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#000000;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tr_canc_final" edge="1" parent="sec2_box" source="st_cancelada" target="st_final" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;">
+        <mxCell id="tr_canc_final" edge="1" parent="1" source="st_cancelada" target="st_final" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#000000;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="974" y="295" />
+              <mxPoint x="1015" y="355" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="note_rule" value="&lt;b&gt;Reglas de Transición de Reserva:&lt;/b&gt;&lt;br&gt;1. &lt;b&gt;Pendiente:&lt;/b&gt; Reserva creada pero aún no pagada/confirmada. Ocupa cupo provisional por máximo 10 minutos.&lt;br&gt;2. &lt;b&gt;Confirmada:&lt;/b&gt; El estudiante confirma antes del vencimiento. Asigna cupo definitivo y genera código QR de acceso.&lt;br&gt;3. &lt;b&gt;Vencida:&lt;/b&gt; Expiran los 10 minutos sin confirmación. Se libera inmediatamente el cupo provisional para otros usuarios.&lt;br&gt;4. &lt;b&gt;Cancelada:&lt;/b&gt; Cancelación explícita por el usuario o administrador. Libera el cupo (si lo ocupaba) y se reporta en el historial." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1;align=left;verticalAlign=top;size=14;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="950" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

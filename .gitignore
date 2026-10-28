@@ -6,8 +6,11 @@ __pycache__/
 # Scratch & temps
 *.tmp
 *.dump.txt
-setup_project.py
-generate_entity_diagrams.py
+*.dtmp
+
+# Ignore legacy empty folder if locked
+Analisis/
+CDU/
 
 # System
 Thumbs.db
