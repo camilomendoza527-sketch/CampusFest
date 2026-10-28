@@ -8,9 +8,9 @@ __pycache__/
 *.dump.txt
 *.dtmp
 
-# Ignore legacy empty folder if locked
-Analisis/
-CDU/
+# Ignore only root legacy empty folders if locked
+/Analisis/
+/CDU/
 
 # System
 Thumbs.db
